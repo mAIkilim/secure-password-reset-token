@@ -1,47 +1,116 @@
-# Secure Password Reset Token
+#Secure Password Reset Token
 
-## Overview
+##Tentang Project
 
-This project demonstrates the difference between an insecure and a secure implementation of a password reset mechanism.
+Project ini dibuat sebagai bagian dari praktikum **Pengkodean Aman (Secure Coding)** dengan studi kasus **Password Reset Token Leak**.
 
-The case study focuses on common security mistakes in password reset systems and how Secure by Design principles can be applied to mitigate them.
+Melalui project ini, saya mempelajari bagaimana fitur reset password yang terlihat sederhana ternyata dapat menimbulkan risiko keamanan apabila tidak dirancang dengan baik.
 
-## Insecure Version
+Project ini membandingkan dua pendekatan:
 
-The insecure implementation contains several vulnerabilities:
+* **Insecure Version** (implementasi yang rentan)
+* **Secure Version** (implementasi dengan prinsip Secure by Design)
 
-- Plaintext token storage
-- Token leakage through application logs
-- No token expiration
-- Reusable tokens
-- No user ownership validation
+---
 
-## Secure Version
+##Permasalahan pada Versi Insecure
 
-The secure implementation introduces:
+Pada implementasi awal ditemukan beberapa kelemahan keamanan:
 
-- Domain Primitive
-- Secure Random Token
-- SHA-256 Token Hashing
-- User Binding
-- Expiry Invariant
-- Read-Once Token
-- Misuse Prevention
+* Token disimpan dalam bentuk plaintext
+* Token tercetak ke log aplikasi
+* Token tidak memiliki masa berlaku (expiration)
+* Token dapat digunakan berulang kali
+* Token tidak terikat dengan pengguna tertentu
 
-## Test Results
+Akibatnya, token yang bocor dapat dimanfaatkan untuk mengambil alih akun pengguna.
 
-The implementation successfully rejects:
+---
 
-- Token Reuse Attack
-- Wrong User Binding Attack
+##Perbaikan pada Versi Secure
 
-## Technologies
+Untuk mengatasi permasalahan tersebut, dilakukan beberapa perbaikan:
 
-- Python
-- Dataclasses
-- hashlib
-- secrets
+* Secure Random Token
+* SHA-256 Token Hashing
+* User Binding
+* Expiry Invariant
+* Read-Once Token
+* Domain Primitive
+* Misuse Prevention
+
+Dengan pendekatan ini, token hanya dapat digunakan oleh pengguna yang berhak dan hanya dapat digunakan satu kali.
+
+---
+
+## 🧪 Hasil Pengujian
+
+### Token Reuse Test
+
+Menguji apakah token yang sudah digunakan dapat dipakai kembali.
+
+**Hasil:** Sistem berhasil menolak penggunaan ulang token.
+
+### Wrong User Binding Test
+
+Menguji apakah token milik pengguna lain dapat digunakan untuk melakukan reset password.
+
+**Hasil:** Sistem berhasil menolak percobaan tersebut.
+
+---
+
+## 📸 Demo Output
+
+> Tambahkan screenshot hasil eksekusi program pada folder `screenshots`.
+
+### Output Program
+
+![Demo Output](screenshots/demo-result.png)
+
+---
+
+##Teknologi yang Digunakan
+
+* Python
+* Dataclasses
+* hashlib
+* secrets
+* datetime
+
+---
+
+##Insight yang Didapat
+
+Dari praktikum ini saya memahami bahwa token bukan sekadar string biasa. Sebuah token memiliki:
+
+* Lifecycle
+* Ownership
+* Expiry
+* Consumption Rules
+
+Penerapan prinsip **Secure by Design** membantu mengurangi risiko keamanan sejak tahap perancangan aplikasi, bukan setelah aplikasi selesai dibuat.
+
+---
+
+##Struktur Project
+
+```text
+secure-password-reset-token/
+│
+├── secure_password_reset.py
+├── README.md
+│
+└── screenshots/
+    └── demo-result.png
+```
+
+---
 
 ## Author
 
-Michael Lim
+**Michael Lim**
+Mahasiswa Informatika
+Fakultas Teknologi Industri
+Universitas Atma Jaya Yogyakarta
+
+Mata Kuliah: **Pengkodean Aman (Secure Coding)**
