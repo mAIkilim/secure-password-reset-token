@@ -1,6 +1,6 @@
-#Secure Password Reset Token
+# Secure Password Reset Token
 
-##Tentang Project
+## Tentang Project
 
 Project ini dibuat sebagai bagian dari praktikum **Pengkodean Aman (Secure Coding)** dengan studi kasus **Password Reset Token Leak**.
 
@@ -43,7 +43,7 @@ Dengan pendekatan ini, token hanya dapat digunakan oleh pengguna yang berhak dan
 
 ---
 
-## 🧪 Hasil Pengujian
+##Hasil Pengujian
 
 ### Token Reuse Test
 
@@ -59,7 +59,7 @@ Menguji apakah token milik pengguna lain dapat digunakan untuk melakukan reset p
 
 ---
 
-## 📸 Demo Output
+## Demo Output
 
 > Tambahkan screenshot hasil eksekusi program pada folder `screenshots`.
 
