@@ -11,9 +11,9 @@ Project ini membandingkan dua pendekatan:
 * **Insecure Version** (implementasi yang rentan)
 * **Secure Version** (implementasi dengan prinsip Secure by Design)
 
----
 
-##Permasalahan pada Versi Insecure
+
+## Permasalahan pada Versi Insecure
 
 Pada implementasi awal ditemukan beberapa kelemahan keamanan:
 
@@ -25,9 +25,9 @@ Pada implementasi awal ditemukan beberapa kelemahan keamanan:
 
 Akibatnya, token yang bocor dapat dimanfaatkan untuk mengambil alih akun pengguna.
 
----
 
-##Perbaikan pada Versi Secure
+
+## Perbaikan pada Versi Secure
 
 Untuk mengatasi permasalahan tersebut, dilakukan beberapa perbaikan:
 
@@ -41,9 +41,9 @@ Untuk mengatasi permasalahan tersebut, dilakukan beberapa perbaikan:
 
 Dengan pendekatan ini, token hanya dapat digunakan oleh pengguna yang berhak dan hanya dapat digunakan satu kali.
 
----
 
-##Hasil Pengujian
+
+## Hasil Pengujian
 
 ### Token Reuse Test
 
@@ -57,8 +57,6 @@ Menguji apakah token milik pengguna lain dapat digunakan untuk melakukan reset p
 
 **Hasil:** Sistem berhasil menolak percobaan tersebut.
 
----
-
 ## Demo Output
 
 > Tambahkan screenshot hasil eksekusi program pada folder `screenshots`.
@@ -67,7 +65,6 @@ Menguji apakah token milik pengguna lain dapat digunakan untuk melakukan reset p
 
 ![Demo Output](screenshots/demo-result.png)
 
----
 
 ##Teknologi yang Digunakan
 
@@ -77,7 +74,6 @@ Menguji apakah token milik pengguna lain dapat digunakan untuk melakukan reset p
 * secrets
 * datetime
 
----
 
 ##Insight yang Didapat
 
@@ -90,7 +86,7 @@ Dari praktikum ini saya memahami bahwa token bukan sekadar string biasa. Sebuah 
 
 Penerapan prinsip **Secure by Design** membantu mengurangi risiko keamanan sejak tahap perancangan aplikasi, bukan setelah aplikasi selesai dibuat.
 
----
+
 
 ##Struktur Project
 
@@ -104,7 +100,7 @@ secure-password-reset-token/
     └── demo-result.png
 ```
 
----
+
 
 ## Author
 
