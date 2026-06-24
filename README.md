@@ -66,7 +66,7 @@ Menguji apakah token milik pengguna lain dapat digunakan untuk melakukan reset p
 ![Demo Output](screenshots/demo-result.png)
 
 
-##Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 * Python
 * Dataclasses
@@ -75,7 +75,7 @@ Menguji apakah token milik pengguna lain dapat digunakan untuk melakukan reset p
 * datetime
 
 
-##Insight yang Didapat
+## Insight yang Didapat
 
 Dari praktikum ini saya memahami bahwa token bukan sekadar string biasa. Sebuah token memiliki:
 
@@ -88,7 +88,7 @@ Penerapan prinsip **Secure by Design** membantu mengurangi risiko keamanan sejak
 
 
 
-##Struktur Project
+## Struktur Project
 
 ```text
 secure-password-reset-token/
